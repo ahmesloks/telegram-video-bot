@@ -42,9 +42,7 @@ def require_channel_member(func):
             logger.exception('خطأ عند التحقق من العضوية')
             # لا نمنع الاستخدام في حال فشل التحقق، لكن نخبر المستخدم
             await update.message.reply_text(
-                '⚠️ فشل التحقق من الاشتراك تلقائياً. تأكد أن البوت مشرف في القناة.
-
-خطأ: {}'.format(e)
+    "⚠️ فشل التحقق من الاشتراك تلقائياً. تأكد أن البوت مشرف في القناة.\n\nخطأ: {}".format(e)
             )
             return
         return await func(update, context, *args, **kwargs)
