@@ -51,10 +51,8 @@ def require_channel_member(func):
 # ---------- أوامر بسيطة ----------
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     txt = (
-        'أهلاً! أرسل رابط فيديو من YouTube أو TikTok أو Instagram وسأحاول تنزيله وإرساله لك.
-
-'
-        'ملاحظة: يجب أن تكون مشتركًا في القناة ليعمل البوت.'
+        'أهلاً! أرسل رابط فيديو من YouTube أو TikTok أو Instagram وسأحاول تنزيله وإرساله لك'
+        'ملاحظة: يجب أن تكون مشتركًا في القناة ليعمل البوت'
     )
     await update.message.reply_text(txt)
 
