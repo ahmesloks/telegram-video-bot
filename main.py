@@ -314,9 +314,10 @@ if(mb_stripos($text,"tiktok.com/")!==false){
 bot('sendMessage',[
 'chat_id'=>$cid , 
  'reply_to_message_id'=>$mid,
-'text'=>"$error
-
-$text",
+error = "حدث خطأ ما"
+data = {
+    'text': f"""<b>{error}</b>"""
+}
 'parse_mode'=>'html',
 'disable_web_page_preview'=>true,
 ]);
