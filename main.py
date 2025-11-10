@@ -188,9 +188,11 @@ if(joinchat($cid)==true){
 		if($text=="/lang" or $text=="/lang@Test_TSSbot"){
 bot('sendmessage',[
     'chat_id'=>$cid,
-    'text'=>"<b>🇦🇪 الرجاء اختيار اللغة
+    data = {
+    'text': """<b> 🇦🇪 الرجاء اختيار اللغة
 🇷🇺 Пожалуйста, выберите язык:
-🇬🇧 Please select a language:</b>",
+🇬🇧 Please select a language:</b>"""
+	},
     'parse_mode'=>'html',
     'reply_to_message_id'=>$mid,
     'reply_markup'=>json_encode([
